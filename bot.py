@@ -2,8 +2,7 @@ from flask import Flask, request
 from telegram import Bot, Update
 from telegram.ext import Dispatcher, CommandHandler
 
-# ========================
-# توکن بات و آماده‌سازی Dispatcher
+# ====== اطلاعات بات ======
 TOKEN = "8217430645:AAHXxrDL14VqWD_Kg6WXV2RL8IWvNE6hr-g"
 bot = Bot(TOKEN)
 dispatcher = Dispatcher(bot, None, workers=0)
@@ -34,7 +33,6 @@ def webhook():
 def index():
     return "Bot is running!"
 
-# ========================
-# بخش اصلی برای Render
+# ====== اجرای بات روی Render ======
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
